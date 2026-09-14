@@ -8,3 +8,15 @@ int sumarRenglon(int renglon[],int n)
 
     return suma;
 }
+
+int sumarColumna(int cuadro [3][3],int columna)
+{
+    int suma = 0;
+    for(int = 0;fila <3;fila++)
+    {
+        suma + = cuadrado[fila][columna];
+
+    }
+
+    return suma;
+}

@@ -3,11 +3,13 @@
 
 
 void pruebas_sumaRenglon();
+void pruebas_sumaColumna();
 
 int main()
 {
 
     pruebas_sumaRenglon();
+    pruebas_sumaColumna();
 
     return 0;
 }
@@ -26,10 +28,14 @@ void pruebas_sumaRenglon()
 
 }
 
+void pruebas_sumaColumna()
+{
+int cuadrado [3][3] = {
+        {2,8,7},
+        {6,5,1},
+        {4,9,3}
 
-#include <stdio.h>
-
-int main() {
-    printf("¡Ya funciona!\n");
+};
+    printf("suma de columnas  : %d\n", sumarColumna(cuadro,0));
     return 0;
 }
