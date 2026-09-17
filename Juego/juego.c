@@ -1,41 +1,38 @@
 #include "funciones.c"
 #include <stdio.h>
 
-
-void pruebas_sumaRenglon();
-void pruebas_sumaColumna();
-
 int main()
 {
+    // Ejemplo de la tarea
+    int cuadro1[3][3] = {
+        {9, 1, 5},
+        {7, 5, 3},
+        {4, 9, 2}
+    };
 
-    pruebas_sumaRenglon();
-    pruebas_sumaColumna();
+    // Cuadro mágico real
+    int cuadro2[3][3] = {
+        {8, 1, 6},
+        {3, 5, 7},
+        {4, 9, 2}
+    };
 
-    return 0;
-}
-    
-void pruebas_sumaRenglon()
-{
+    printf("=== VERIFICAR CUADRO MÁGICO ===\n\n");
 
-    int cuadro [3][3] = {  //una tabla 3x3
-        {2,8,7},
-        {6,5,1},
-        {4,9,3}
-     };
+    // Prueba 1: ejemplo de la tarea
+    printf("→ Probando cuadro 1:\n");
+    int res1 = esCuadroMagico(cuadro1);
+    if(res1 != 0)
+        printf(" ES CUADRO MÁGICO! Constante = %d\n", res1);
+    else
+        printf(" NO es cuadro mágico\n");
 
-    printf("prueba funcion con entrada 10");
-    printf("suma de primer renglon:%d,",sumarRenglon(cuadro[0],3));//suma la primera fila : 2+8+7= 17
+    printf("\n→ Probando cuadro 2:\n");
+    int res2 = esCuadroMagico(cuadro2);
+    if(res2 != 0)
+        printf(" ES CUADRO MÁGICO! Constante = %d\n", res2);
+    else
+        printf("NO es cuadro mágico\n");
 
-}
-
-void pruebas_sumaColumna()
-{
-int cuadrado [3][3] = {
-        {2,8,7},
-        {6,5,1},
-        {4,9,3}
-
-};
-    printf("suma de columnas  : %d\n", sumarColumna(cuadro,0));
     return 0;
 }
